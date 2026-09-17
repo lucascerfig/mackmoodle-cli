@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mackmoodle-cli"
+version = "0.1.1"
+description = "Linha de comando para o Moodle da graduação do Mackenzie."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Lucas Figueiredo", email = "lucas.cerfig@gmail.com" }]
+dependencies = []
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Environment :: Console",
+]
+
+[project.urls]
+Repositorio = "https://github.com/lucascerfig/mackmoodle-cli"
+
+[project.scripts]
+mackmoodle = "mackmoodle.cli:main"
+mackmoodle-mcp = "mackmoodle.mcp_server:main"
+
+[tool.setuptools]
+packages = ["mackmoodle"]
